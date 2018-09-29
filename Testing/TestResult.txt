@@ -1,0 +1,15 @@
+Teet
+
+5 Functions:
+On
+Off
+High
+Mid
+Low
+Flash
+
+Size Optimization
+
+Battery Life
+
+Drop Test
