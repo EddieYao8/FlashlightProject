@@ -1,4 +1,7 @@
 # FlashlightProject
 Fall Semester Project
 
-Trial
+Flash light Semster Project
+
+On/Off, 3 levels of brightness, 2 Hz Flashing Light
+
