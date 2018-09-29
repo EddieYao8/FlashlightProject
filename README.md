@@ -1,4 +1,4 @@
 # FlashlightProject
 Fall Semester Project
 
-Trial
+ON/OFF, 3 levels of Brightness, 2Hz Flash mode
