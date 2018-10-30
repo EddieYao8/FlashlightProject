@@ -2,6 +2,7 @@ Code Flow
 
 Off -> High -> Mid -> Low -> Flashing -> Off
 
+MAKE LOOP() just FUNCTIONS, Better flow
 
 int ledpin = // LED digital pin
 int analogPin = // 
