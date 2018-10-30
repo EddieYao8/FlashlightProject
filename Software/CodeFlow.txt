@@ -1,8 +1,67 @@
 Code Flow 
 
-On -> Off
-High
-Mid
-Low
-Flash
+Off -> High -> Mid -> Low -> Flashing -> Off
+
+
+int ledpin = // LED digital pin
+int analogPin = // 
+int buttonPin = //
+int count = 0; // Store mode number
+bool button = false // Button press
+int ledState = LOW;
+
+unsigned long previousMillis = 0 // store last time LED updated
+const long interval = 500  //interval at which to blink (milliseconds)
+
+setup()
+{
+pinmode(ledPin, OUTPUT)
+pinmode(buttonPin, INPUT)
+digitalwrite(buttonPin, Low) // don't draw power 
+attachInterrupt(digitalPinToInterrupt(interruptPin), blink, CHANGE)
+)
+
+loop()
+{
+  unsigned long = currentMillies = millis(); //Keep track of running time
+  
+  if button press{
+  count = count +1;   \\ Change mode only when pressed
+  if count>1000
+  count= 0;         \\ Limit on data size of int
+  button = false
+  }
+  // Function based on mode(count) 
+  if count mod 5 = 0
+  analogWrite(ledPin, 0); // OFF
+  
+  if count mod 5 = 1
+  analogWrite(ledPin, 250); // High Mode
+  if count mod 5 = 2
+  analogWrite(ledPin, 250/2); // Mid Mode
+  if count mod 5 = 3 
+  analogWrite(ledPin, 250/4); // Low Mode
+
+  if count mod 5 = 4   // Blinking at 2Hz
+  if (currentMillis - previousMillis >= interval) 
+  {
+    previousMillis = currentMillis; // save the last time you blinked the LED
+    
+    if (ledState == LOW)
+    {
+      ledState = HIGH;
+      analogWrite(ledPin, 200); // On 
+    } 
+    else 
+    {
+      ledState = LOW;
+      analogWrite(ledPin, 0); // OFF
+    }
+  }
+}
+
+void blink() 
+{
+  state = !state;
+}
 
