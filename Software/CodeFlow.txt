@@ -25,7 +25,7 @@ loop()
 {
   unsigned long = currentMillies = millis(); //Keep track of running time
   
-  if button press{
+  if interrput (button press) {
   count = count +1;   \\ Change mode only when pressed
   if count>1000
   count= 0;         \\ Limit on data size of int
