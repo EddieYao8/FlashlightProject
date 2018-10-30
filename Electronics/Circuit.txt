@@ -1,2 +1,20 @@
 Circuit Parts/Ideas
 
+Battery
+Voltage Regulator
+
+Bypass capacitor
+
+Pull-up switch/button
+
+Arduino
+LED
+Resistor
+
+Custom made connectors
+Male piece on the board
+
+Single Sided board: Ground
+Part placement and routing unique
+
+Vias not conductive
