@@ -1,32 +1,38 @@
-Code Flow 
+//Code Flow 
+//
+//Off -> High -> Mid -> Low -> Flashing -> Off
+//
+//MAKE LOOP() just FUNCTIONS, Better flow
+//
 
-Off -> High -> Mid -> Low -> Flashing -> Off
+#define ledPin 13  // LED digital pin
+#define buttonPin 3  // Button Pin
+#define maxLED 255 // MAX LED level
 
-MAKE LOOP() just FUNCTIONS, Better flow
-
-int ledpin = // LED digital pin
-int analogPin = // 
-int buttonPin = //
 int count = 0; // Store mode number
 bool button = false // Button press
 int ledState = LOW;
 
-unsigned long previousMillis = 0 // store last time LED updated
-const long interval = 500  //interval at which to blink (milliseconds)
+unsigned long previousMillis = 0; // store last time LED updated
+unsigned long interval = 1000;  //interval at which to blink (milliseconds)
+const long freq = 2; // Frequency in Hz
+unsigned long currentMillies = 0; // Running time
 
-setup()
-{
-pinmode(ledPin, OUTPUT)
-pinmode(buttonPin, INPUT)
-digitalwrite(buttonPin, Low) // don't draw power 
-attachInterrupt(digitalPinToInterrupt(interruptPin), blink, CHANGE)
-)
+void setup(){
+  pinmode(ledPin, OUTPUT)
+  pinmode(buttonPin, INPUT)
+  digitalwrite(buttonPin, Low) // don't draw power 
+  attachInterrupt(digitalPinToInterrupt(interruptPin), blink, FALLING)
+  interval = 1000/freq;
+  
+}
 
-loop()
+void loop()
 {
-  unsigned long = currentMillies = millis(); //Keep track of running time
-  checkbuttonpress();
-  light_on() ;
+  currentMillies = millis(); //Keep track of running time
+  checkbuttonpress(); // Check if button press 
+  
+  light_on() ;    //Change LED state
 }
 
 void checkbuttonpress()
@@ -40,24 +46,39 @@ void checkbuttonpress()
 }
 
 
-void blink() {
+void blink() 
+{
   state = !state;
 }
 
 void light_on()
 {
   // Function based on mode(count); CHANGE TO CASE STATEMENTS
-  if count mod 5 = 0
-  analogWrite(ledPin, 0); // OFF
-  
-  if count mod 5 = 1
-  analogWrite(ledPin, 250); // High Mode
-  if count mod 5 = 2
-  analogWrite(ledPin, 250/2); // Mid Mode
-  if count mod 5 = 3 
-  analogWrite(ledPin, 250/4); // Low Mode
-
-  if count mod 5 = 4 {  // Blinking at 2Hz
+  switch(count % 5) {
+    case 0:
+      analogWrite(ledPin, 0); // OFF
+      break;
+    
+    case 1:
+      analogWrite(ledPin, int(maxLED)); // High Mode
+      break;
+      
+    case 2:
+      analogWrite(ledPin, int(maxLED/2)); // Mid Mode
+      break:
+      
+    case 3:  
+      analogWrite(ledPin, int(maxLED/4)); // Low Mode
+      break;
+      
+    case 4: 
+      blinkLED();
+      break;
+}
+    
+void blinkLED()
+{
+    // Blinking at 2Hz
     if (currentMillis - previousMillis >= interval) 
     {
       previousMillis = currentMillis; // save the last time you blinked the LED
