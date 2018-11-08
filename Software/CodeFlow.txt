@@ -25,20 +25,22 @@ attachInterrupt(digitalPinToInterrupt(interruptPin), blink, CHANGE)
 loop()
 {
   unsigned long = currentMillies = millis(); //Keep track of running time
-  
-  if interrput (button press) 
+  checkbuttonpress();
+  light_on() ;
+}
+
+void checkbuttonpress()
+{
+ if interrput (button press) 
   {
   count = count +1;   \\ Change mode only when pressed
   if count>1000
   count= 0;         \\ Limit on data size of int
   button = false
-  }
-  
-  light_on() 
 }
 
-void blink() 
-{
+
+void blink() {
   state = !state;
 }
 
@@ -55,21 +57,20 @@ void light_on()
   if count mod 5 = 3 
   analogWrite(ledPin, 250/4); // Low Mode
 
-  if count mod 5 = 4   // Blinking at 2Hz
-  {
-  if (currentMillis - previousMillis >= interval) 
-  {
-    previousMillis = currentMillis; // save the last time you blinked the LED
+  if count mod 5 = 4 {  // Blinking at 2Hz
+    if (currentMillis - previousMillis >= interval) 
+    {
+      previousMillis = currentMillis; // save the last time you blinked the LED
     
-    if (ledState == LOW)
-    {
-      ledState = HIGH;
-      analogWrite(ledPin, 200); // On 
-    } 
-    else 
-    {
-      ledState = LOW;
-      analogWrite(ledPin, 0); // OFF
+      if (ledState == LOW)
+      {
+        ledState = HIGH;
+        analogWrite(ledPin, 200); // On 
+      } 
+      else 
+      {
+        ledState = LOW;
+        analogWrite(ledPin, 0); // OFF
+      }
     }
-  }
 }
