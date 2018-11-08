@@ -86,7 +86,7 @@ void blinkLED()
       if (ledState == LOW)
       {
         ledState = HIGH;
-        analogWrite(ledPin, 200); // On 
+        analogWrite(ledPin, maxLED); // On 
       } 
       else 
       {
