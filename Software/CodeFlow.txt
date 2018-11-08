@@ -26,13 +26,25 @@ loop()
 {
   unsigned long = currentMillies = millis(); //Keep track of running time
   
-  if interrput (button press) {
+  if interrput (button press) 
+  {
   count = count +1;   \\ Change mode only when pressed
   if count>1000
   count= 0;         \\ Limit on data size of int
   button = false
   }
-  // Function based on mode(count) 
+  
+  light_on() 
+}
+
+void blink() 
+{
+  state = !state;
+}
+
+void light_on()
+{
+  // Function based on mode(count); CHANGE TO CASE STATEMENTS
   if count mod 5 = 0
   analogWrite(ledPin, 0); // OFF
   
@@ -44,6 +56,7 @@ loop()
   analogWrite(ledPin, 250/4); // Low Mode
 
   if count mod 5 = 4   // Blinking at 2Hz
+  {
   if (currentMillis - previousMillis >= interval) 
   {
     previousMillis = currentMillis; // save the last time you blinked the LED
@@ -60,9 +73,3 @@ loop()
     }
   }
 }
-
-void blink() 
-{
-  state = !state;
-}
-
