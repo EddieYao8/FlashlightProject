@@ -1,0 +1,26 @@
+Search under Explorer
+2x4 female
+1x2 female Battery
+
+Look at github for resistor
+10uF,0.1 uF
+
+GRM21BR71A105KA01L LED Name the parts to compile 
+
+Milestone 04
+Based on your feedback from Dr. Palmeri and your breadboard testing, submit your "final" electronic design, captured in your EDA program. Be sure to commit PDFs of your circuit schematic and your PCB layout under Hardware/; include discrete component technical specification sheets under Docs/.
+If using an MCU, be sure to also commit your software.
+Tag / release this as v0.2.0 when ready for review.
+Work with Matt Brown and your TAs to execute on fabricating your PCB.
+
+440 Screw 
+Diameter .125inch hole
+Thread Count 40
+Wood Screw = pointed wedge
+Machine screw = threaded hole
+
+Dimensions of Battery?
+H 48.5mm (1.91in) x L 26.5mm (1.04in) x W 17.5mm (0.69in) 
+Add clearance for connecting wires
+
+Board is W 33 mm x L 72 mm x H 9.2mm + 2.5mm (LED) 
