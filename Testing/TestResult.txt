@@ -1,4 +1,4 @@
-Teet
+Test
 
 5 Functions:
 On
@@ -9,7 +9,42 @@ Low
 Flash
 
 Size Optimization
+PCB 65 mm x 40 mm x 20 mm
+Battery 26 mm x 52 mm x 17 mm
 
-Battery Life
+LED Position
+21mm From Right
+15mm from top
 
-Drop Test
+Button
+21mm from Top
+12mm from Right
+8mm height
+
+4-40 Screws
+20mm long
+3.175 mm diameter
+
+V1
+100 x 60
+95 x 55
+90 x 50
+3mm lip chamfer 2mm 
+
+V2 
+105 x 65
+100 x 60
+95 x 55
+3mm lip
+fillet 2.5mm
+
+20 x 2 mm tab to open
+Button Extension = 3.8 mm diameter, 12mm Long
+
+V3 
+Added Screwholes 
+
+V4
+Adjust depth and size of holes for screw and nut. 
+
+Drop Test = Added Screw and Nut to secure from fall 
